@@ -19,7 +19,7 @@ git clone https://github.com/IntAlgambra/brandquad.git
 2. Переходим в папку проекта и создаем файл с переменными окружения .brandquad.env
 
 
-3. Прописываем в .frtest.env необходимые переменные окружения
+3. Прописываем в .brandquad.env необходимые переменные окружения
 
 ```
 DJANGO_SECRET_KEY=секретный ключ приложения Джанго
