@@ -12,8 +12,8 @@ class TestLogRecordDatamodel(SimpleTestCase):
         "method": "GET",
         "endpoint": "/index.php?option=com_phocagallery&view=category&id=1:almhuette-raith&Itemid=53",
         "protocol": "HTTP/1.1",
-        "response_code": 200,
-        "response_size": 32123,
+        "response_code": "200",
+        "response_size": "32918",
         "referer": "http://www.almhuette-raith.at/",
         "user_agent": "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
     }
@@ -56,7 +56,7 @@ class TestLogRecordDatamodel(SimpleTestCase):
     def testInvalidResponseSize(self):
         data = {
             **self.TEST_DATA,
-            "response_size": 123.74
+            "response_size": "123.74"
         }
         with self.assertRaises(ValidationError):
             Record(**data)

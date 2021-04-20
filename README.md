@@ -1,6 +1,6 @@
 # Candyapi
 
-Реализация тестового задания от Фабрики Решений. API для управления опросами
+Реализация тестового задания от Brandquad. django-приложение для мониторинга апач-логов.
 
 ## Требования
 
@@ -60,6 +60,10 @@ sudo docker-compose run --rm backend python manage.py load_log <url to log file>
 ```
 
 
-## Документация
+## Тесты
 
-Документация в формате openapi находится в файле openapi.yml
+Для запуска тестов:
+
+```
+sudo docker-compose run --rm backend python manage.py test
+```

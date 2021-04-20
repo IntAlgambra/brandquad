@@ -21,10 +21,10 @@ class TestParser(SimpleTestCase):
 
     def testInvaidString(self):
         """
-        при строке неверного формата возбуждается IndexError (остальные ошибки
+        при строке неверного формата возбуждается исключение (остальные ошибки
         перехватываются при создании Record)
         """
         invalid_string = '[19/Dec/2020:15:23:13 +0100] "GET /templates/jp_hotel/images/logo.jpg HTTP/1.1" 200 369 "http://www.almhuette-raith.at/" "Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAW'
-        with self.assertRaises(IndexError):
+        with self.assertRaises(ValueError):
             parse_record(invalid_string)
 

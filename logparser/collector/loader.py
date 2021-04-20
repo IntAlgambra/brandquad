@@ -23,6 +23,9 @@ def load_log(url: str) -> None:
             continue
         try:
             record = parse_record(line.decode())
+        except ValueError:
+            # обработка случая, в котором у времени лога неверный формат
+            continue
         except IndexError:
             # обработка случая, в котором у все строки невалидная структура
             continue
